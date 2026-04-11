@@ -25,4 +25,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  define: {
+    // 确保 DevTools 能正常工作
+    __VUE_PROD_DEVTOOLS__: false, // 生产环境禁用
+  },
 })
