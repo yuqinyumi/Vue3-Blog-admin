@@ -6,6 +6,9 @@ defineProps({
   modelValue: {
     type: [Number, String],
   },
+  width: {
+    type: String,
+  },
 })
 const emit = defineEmits(['update:modelValue'])
 
@@ -19,7 +22,11 @@ getChannelList()
 </script>
 
 <template>
-  <el-select :modeValue="modelValue" @updat:modelValue="emit('update:modelValue', $event)">
+  <el-select
+    :style="{ width }"
+    :modeValue="modelValue"
+    @updat:modelValue="emit('update:modelValue', $event)"
+  >
     <el-option
       v-for="channel in channelList"
       :key="channel.id"
