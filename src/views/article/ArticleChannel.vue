@@ -38,6 +38,7 @@ const onSuccess = () => {
   getChannelList()
 }
 </script>
+
 <template>
   <page-container title="文章分类">
     <template #extra>
